@@ -1,0 +1,23 @@
+{
+    "type": "folder",
+    "title": "Browser",
+    "modes": [],
+    "usageCount": 100,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "filter": {
+        "regex": "Navigator.firefox|geany.Geany",
+        "isRecursive": true
+    }
+}
