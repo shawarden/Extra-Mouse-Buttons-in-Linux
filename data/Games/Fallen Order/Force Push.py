@@ -44,7 +44,7 @@ if not store.get_value("isPressed"):
     keyboard_actual.press('2')
 
     # Wait for key release.
-    #system('~/.config/autokey/keyrelease.sh 87')
+    #system('~/.config/autokey/scripts/keyrelease.sh 87')
 
     waitForKeyRelease('1',True)
 
