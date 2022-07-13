@@ -4,9 +4,11 @@ from pynput.mouse import Listener as MouseListener
 from pynput.keyboard import Listener as KeyboardListener
 import logging, sys, subprocess
 
-logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
-					level=logging.DEBUG,
-					stream=sys.stderr)
+logging.basicConfig(
+	format='%(asctime)s %(levelname)s %(message)s',
+	level=logging.DEBUG,
+	stream=sys.stderr
+)
 
 def get_active_window():
 	cmd		= "xprop -id $(xdotool getactivewindow)"

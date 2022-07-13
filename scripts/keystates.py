@@ -3,9 +3,11 @@
 from pynput import keyboard
 import logging, sys, subprocess
 
-logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
-					level=logging.DEBUG,
-					stream=sys.stderr)
+logging.basicConfig(
+    format='%(asctime)s %(levelname)s %(message)s',
+	level=logging.DEBUG,
+	stream=sys.stderr
+)
 
 def waitForKeyRelease(realKey,bNumpadOnly=False):
     logging.info("Wait for the desired key to be released")

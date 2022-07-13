@@ -5,9 +5,11 @@ from pynput.keyboard import Controller
 from keystats import waitForKeyRelease
 import logging, sys, subprocess
 
-logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
-					level=logging.DEBUG,
-					stream=sys.stderr)
+logging.basicConfig(
+    format='%(asctime)s %(levelname)s %(message)s',
+	level=logging.DEBUG,
+	stream=sys.stderr
+)
 
 keyboard_actual = Controller()
 
