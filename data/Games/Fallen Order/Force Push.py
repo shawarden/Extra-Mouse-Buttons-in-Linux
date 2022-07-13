@@ -1,40 +1,40 @@
 # No env since it's run within AutoKey
 
 from os import system
-from pynput import keyboard
+from pynput.keyboard import Controller
 from keystats import waitForKeyRelease
+import logging, sys, subprocess
 
-keyboard_actual = keyboard.Controller()
+logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
+					level=logging.DEBUG,
+					stream=sys.stderr)
 
-# Does store exist?
+keyboard_actual = Controller()
+
+logging.info("Does store exist?")
 if not store.has_key("isPressed"):
-    # Create store.
+    logging.info("Creating store.")
     store.set_value("isPressed",False)
 
-# Are we pressing?
+logging.info("Are we pressing?")
 if not store.get_value("isPressed"):
-    # Not pressing.
+    logging.info("Not pressing!")
 
-    print(' --- pressing ---')
-
-    # Set keypress to store
+    logging.info("Set keypress to store")
     store.set_value("isPressed",True)
-    # Press the key
+    logging.info("Press the key")
     keyboard_actual.press('2')
 
-    # Wait for key release.
+    logging.info("Wait for key release.")
     #system('~/.config/autokey/scripts/keyrelease.sh 87')
-
     waitForKeyRelease('1',True)
 
-    print(' --- releasing ---')
-
-    # Release keypress from store
+    logging.info("Release keypress from store")
     store.set_value("isPressed",True)
-    # Release keypress
+    logging.info("Release keypress")
     keyboard_actual.release('2')
 else:
-    print(' --- spam ---')
+    logging.info("We're spamming again aren't we")
 
 
 

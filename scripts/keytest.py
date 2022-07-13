@@ -6,7 +6,7 @@ import logging, sys, subprocess
 
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
 					level=logging.DEBUG,
-					stream=sys.stdout)
+					stream=sys.stderr)
 
 def get_active_window():
 	cmd		= "xprop -id $(xdotool getactivewindow)"

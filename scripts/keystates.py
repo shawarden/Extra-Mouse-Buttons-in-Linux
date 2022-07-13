@@ -1,51 +1,60 @@
 #!/usr/bin/env python3
 
 from pynput import keyboard
+import logging, sys, subprocess
+
+logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
+					level=logging.DEBUG,
+					stream=sys.stderr)
 
 def waitForKeyRelease(realKey,bNumpadOnly=False):
-    """Waits for the desired key to be released"""
+    logging.info("Wait for the desired key to be released")
 
     def isNumberPad(key):
-        """Checks if key is on the numberpad"""
+        logging.info("Check if key is numpad/mapped")
 
-        # Does key have virtual key attribute?
+        logging.info("Does key have virtual key attribute?")
         if hasattr(key, 'vk'):
-            # Is that virtual key None
+            logging.info("YES! Is that virtual key empty/None?")
             if key.vk is None:
-                # It's on the numberpad? Or just the mouse?
+                logging.info("YES! It's numpad/mapped")
                 return True
-            # It's not a numberbad/mapped mouse?
+            logging.info("NO! It's not a numpad/mapped")
             return False
-        # It doesn't have a virtual key attribute
+        logging.info("NO!")
         return False
 
     def on_release(key):
-        """Exits listener on key release"""
+        logging.info("Exits listener on key release")
 
-        # What Key was it?
         nonlocal realKey
-        # Numpad only?
+        logging.info("Target key: "+realKey)
         nonlocal bNumpadOnly
+        logging.info("Numpad/mapped key? "+bNumpadOnly)
 
-        # Is this a char key?
-        # What if it's a special key?
-        # FIX ME!
+        logging.info("Is this a char key?")
         if hasattr(key, 'char'):
-            # Does our key match?
+            logging.info("YES! Does our key match?")
             if key.char == realKey:
-                # Are we after a numberpad/mouse map?
+                logging.info("YES! Are we after numpad/mapped?")
                 if bNumpadOnly:
-                    # Is this key a numberpad/mouse map?
+                    logging.info("YES! Is this key numpad/mapped?")
                     if isNumberPad(key):
-                        # Exit listener
+                        logging.info("YES! Exit listener")
                         return False
-                    # else: don't exit
+                    else:
+                        logging.info("NO! Not numbpad/mapped.")
                 else:
-                    # Exit listener
+                    logging.info("NO! Exit listener")
                     return False
+            else:
+                logging.info("NO! Keep waiting.")
+        else:
+            logging.info("NO! Need to handle other keys!")
 
-    # Watch for key release trigger
+    logging.info("Watch for key release trigger")
     with keyboard.Listener(
         on_release=on_release
     ) as listener:
         listener.join()
+    logging.info("Key released!"
