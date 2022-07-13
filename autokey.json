@@ -1,6 +1,6 @@
 {
     "version": "0.96.0",
-    "userCodeDir": null,
+    "userCodeDir": "/home/samh/.config/autokey/scripts",
     "settings": {
         "isFirstRun": false,
         "serviceRunning": true,
@@ -17,7 +17,7 @@
         ],
         "hPanePosition": 260,
         "columnWidths": [
-            157,
+            94,
             39,
             179
         ],

@@ -2,31 +2,9 @@
 
 from os import system
 from pynput import keyboard
+from keystats import waitForKeyRelease
 
 keyboard_actual = keyboard.Controller()
-
-def waitForKeyRelease(realKey,bNumpadOnly=False):
-    def isNumberPad(key):
-        if hasattr(key, 'vk'):
-            if key.vk is None:
-                return True
-            return False
-        return False
-
-    def on_release(key):
-        nonlocal realKey
-        nonlocal bNumpadOnly
-        if hasattr(key, 'char'):
-            if key.char == realKey:
-                if bNumpadOnly:
-                    if isNumberPad(key):
-                        return False
-                else:
-                    return False
-
-    # wait until key is released
-    with keyboard.Listener(on_release=on_release) as listener:
-        listener.join()
 
 # Does store exist?
 if not store.has_key("isPressed"):
