@@ -1,3 +1,3 @@
 # My AutoKey config files.
 
-Because losing config files sucks.
+Because losing config files kinda sucks.
