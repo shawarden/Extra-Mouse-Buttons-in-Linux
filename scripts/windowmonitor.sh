@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#####
+# Monitor active window.
+# If active window changes, output window properties.
+#####
 
 while :;
 do
@@ -15,7 +19,8 @@ do
 	)
 	if [ "${curWindow}" != "${oldWindow}" ]
 	then
-		echo "${windowData}"
+		echo "-------------"
+		echo "${windowData}" | grep -E '^(WM_CLASS|WM_CLIENT_LEADER|WM_NAME)' | sort
 		oldWindow=${curWindow}
 	fi
 done

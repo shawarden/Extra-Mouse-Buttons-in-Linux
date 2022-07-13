@@ -1,10 +1,11 @@
+# No env since it's run within AutoKey
+
 from os import system
 from pynput import keyboard
 
 keyboard_actual = keyboard.Controller()
 
 def waitForKeyRelease(realKey,bNumpadOnly=False):
-    print('Key?', realKey, 'Numpad?', bNumpadOnly)
     def isNumberPad(key):
         if hasattr(key, 'vk'):
             if key.vk is None:
@@ -59,5 +60,5 @@ else:
 
 
 
-    
+
 
