@@ -2,12 +2,12 @@
     "type": "script",
     "description": "Force Push",
     "store": {
-        "isPressed": true
+        "isPressed": false
     },
     "modes": [
         3
     ],
-    "usageCount": 162,
+    "usageCount": 189,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -21,7 +21,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "m"
+        "hotKey": "<np_page_down>"
     },
     "filter": {
         "regex": null,
