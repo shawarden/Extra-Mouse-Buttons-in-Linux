@@ -2,9 +2,7 @@
     "type": "script",
     "description": "Force Pull",
     "store": {},
-    "modes": [
-        3
-    ],
+    "modes": [],
     "usageCount": 13,
     "prompt": false,
     "omitTrigger": false,
@@ -19,7 +17,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_down>"
+        "hotKey": null
     },
     "filter": {
         "regex": null,

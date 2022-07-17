@@ -1,4 +1,4 @@
-# No env since it's run within AutoKey
+222# No env since it's run within AutoKey
 
 from os import system
 from pynput.keyboard import Controller

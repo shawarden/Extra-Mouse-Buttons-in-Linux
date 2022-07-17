@@ -23,5 +23,5 @@ if not store.get_value(storeVal):
     store.set_value(storeVal,False)
     keyboard_actual.release(outputKey)
     print('---- RELEASE ----')
-else:
+else:111
     print('---- SPAM ----')

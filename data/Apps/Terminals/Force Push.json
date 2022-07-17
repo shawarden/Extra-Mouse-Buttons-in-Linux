@@ -4,9 +4,7 @@
     "store": {
         "isPressed": false
     },
-    "modes": [
-        3
-    ],
+    "modes": [],
     "usageCount": 189,
     "prompt": false,
     "omitTrigger": false,
@@ -21,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_page_down>"
+        "hotKey": null
     },
     "filter": {
         "regex": null,

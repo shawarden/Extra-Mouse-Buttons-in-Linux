@@ -2,9 +2,7 @@
     "type": "script",
     "description": "Force Push",
     "store": {},
-    "modes": [
-        3
-    ],
+    "modes": [],
     "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
@@ -19,7 +17,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_end>"
+        "hotKey": null
     },
     "filter": {
         "regex": null,

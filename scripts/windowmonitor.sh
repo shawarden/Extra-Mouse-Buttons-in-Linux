@@ -20,7 +20,8 @@ do
 	if [ "${curWindow}" != "${oldWindow}" ]
 	then
 		echo "-------------"
-		echo "${windowData}" | grep -E '^(WM_CLASS|WM_CLIENT_LEADER|WM_NAME)' | sort
+		echo "${windowData}" | grep --color=auto -E '^|^(WM_CLASS|WM_NAME)|window.id.#.[0-9]x[0-9a-z]{1,}'
+
 		oldWindow=${curWindow}
 	fi
 done
