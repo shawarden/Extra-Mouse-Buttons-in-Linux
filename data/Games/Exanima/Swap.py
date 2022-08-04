@@ -1,4 +1,5 @@
-from pynput.keyboard import Controller
-keyboard_actual = Controller()
-keyboard_actual.press('p')
-keyboard_actual.release('p')
+from os import system as run
+
+run("wmctrl -a Exanima -b add,above")
+keyboard.send_key("p")
+run("wmctrl -a Exanima -b remove,above")

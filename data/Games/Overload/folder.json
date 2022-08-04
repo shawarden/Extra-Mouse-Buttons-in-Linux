@@ -1,8 +1,8 @@
 {
     "type": "folder",
-    "title": "Browser",
+    "title": "Overload",
     "modes": [],
-    "usageCount": 161,
+    "usageCount": 0,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [],
@@ -17,7 +17,7 @@
         "hotKey": null
     },
     "filter": {
-        "regex": "kate.kate|Navigator.firefox",
+        "regex": "Overload.x86_64.Overload.x86_64",
         "isRecursive": true
     }
 }
