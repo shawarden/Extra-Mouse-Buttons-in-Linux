@@ -12,7 +12,7 @@ Generally non-usable mouse buttons are configured as F13+ keys via windows drive
 	- FN1 (Left Edge Fore):			F21
 	- FN2 (Left Edge Back):			F22
 	- FN3 (Right Edge):				F23
-3. SteelSeries Rival 500 (Set via windows driver)
+3. SteelSeries Rival 500 ([Set via windows driver](https://old.reddit.com/r/linux_gaming/comments/pns050/any_fellow_steelseries_and_linux_enjoyers_out/))
 	- 6 (Thumb Bottom Fore):			F16
 	- 7 (Thumb Bottom):				F17
 	- 8 (Thumb Middle):				F18
@@ -29,5 +29,6 @@ Generally non-usable mouse buttons are configured as F13+ keys via windows drive
 ## Usage:
 
 1. Clone somewhere
-2. Softlink `~/.xbindkeys` to `.../Linux_EMB/.xbindkeys`
-3. Softlink `~/.config/autokey` to `.../Linux_EMB/autokey`
+2. Softlink `~/.config/autokey` to `.../Linux_EMB/autokey`
+3. Softlink `~/.xbindkeys` to `.../Linux_EMB/.xbindkeys`
+4. Softlink `~/.xbindkeysrc` to `~/.xbindkeys/.xbindkeysrc`
