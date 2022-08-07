@@ -1,10 +1,8 @@
-# My AutoKey config files.
+# Extra Mouse Buttons in Linux.
 
-Because losing config files kinda sucks.
+Because losing config files kinda sucks!
 
-Mostly keybinds for extra mouse buttons.
-
-Unused mouse buttons rebound to F13+ keys via windows driver or input-remapper.
+Generally non-usable mouse buttons are configured as F13+ keys via windows driver or `input-remapper` then bound to scripts via `autkey`.
 
 1. Logitech Trackman Optical (Set via `input-remapper`)
 	- Scroll Up (Left Edge Fore):		F21
@@ -23,3 +21,7 @@ Unused mouse buttons rebound to F13+ keys via windows driver or input-remapper.
 	- 11 (Left Edge Fore):			F21
 	- 12 (Left Edge Back):			F22
 	- 13 (Right Edge):				F23
+
+## Issues:
+
+`xbindkeys` and `autokey` have issues with button release events that some games don't like. They press the button over and over or the release event doesn't trigger properly. If different things can happen on a button press, tap or hold, `autokey` and `xbindkeys` doesn't work. Python and shell scrips allow for better tracking but `autokey` shifts application focus somehow, not sure how/why and responsiveness is problematic.
