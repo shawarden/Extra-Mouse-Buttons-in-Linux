@@ -1,4 +1,4 @@
-# Extra Mouse Buttons in Linux.
+# Linux with Extra Mouse Buttons
 
 Because losing config files kinda sucks!
 
@@ -25,3 +25,9 @@ Generally non-usable mouse buttons are configured as F13+ keys via windows drive
 ## Issues:
 
 `xbindkeys` and `autokey` have issues with button release events that some games don't like. They press the button over and over or the release event doesn't trigger properly. If different things can happen on a button press, tap or hold, `autokey` and `xbindkeys` doesn't work. Python and shell scrips allow for better tracking but `autokey` shifts application focus somehow, not sure how/why and responsiveness is problematic.
+
+## Usage:
+
+1. Clone somewhere
+2. Softlink `~/.xbindkeys` to `.../Linux_EMB/.xbindkeys`
+3. Softlink `~/.config/autokey` to `.../Linux_EMB/autokey`
