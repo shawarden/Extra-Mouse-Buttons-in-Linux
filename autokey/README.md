@@ -12,7 +12,7 @@ Generally non-usable mouse buttons are configured as F13+ keys via windows drive
 	- FN1 (Left Edge Fore):			F21
 	- FN2 (Left Edge Back):			F22
 	- FN3 (Right Edge):				F23
-3. SteelSeries Rival 500 (Set via windows driver)
+3. SteelSeries Rival 500 ([Set via windows driver](https://old.reddit.com/r/linux_gaming/comments/pns050/any_fellow_steelseries_and_linux_enjoyers_out/))
 	- 6 (Thumb Bottom Fore):			F16
 	- 7 (Thumb Bottom):				F17
 	- 8 (Thumb Middle):				F18
